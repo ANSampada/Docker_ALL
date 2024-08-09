@@ -1,4 +1,3 @@
-```
 docker version 
 docker info
 docker run --name mongo -d mongo 
@@ -33,5 +32,4 @@ Creating network and DNS
   •	docker network inspect dude
   •	docker run --rm --net dude alpine nslookup search
   •	docker container run --rm --net dude centos curl -s search:9200
-```
 
