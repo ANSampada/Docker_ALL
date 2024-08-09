@@ -1,2 +1,36 @@
 docker version 
 docker info
+docker run --name mongo -d mongo 
+docker top mongo 
+ps aux 
+docker stop mongo 
+ps au
+docker container run --publish 80:80 nginx
+docker container run --publish 8080:80 --name webhost -d nginx:1.11 nginx -T
+docker container logs
+docker container stop 
+docker container rm
+docker container ls / docker container ps
+docker container run --rm -it centos:7 bash--->( this command will run the container in interactive mode and removes container onec after running)
+What's Going On In Containers
+  • docker container top - process list in one container 
+  • docker container inspect - details of one container config 
+  • docker container stats - performance stats for all containers Getting a Shell Inside Containers
+  • docker container run -it - start new container interactively 
+  • docker container exec -it - run additional command in existing containe
+docker container run -p
+docker container port <container>
+Docker Networks: CLI Management
+  • Show networks:  docker network ls
+  • Inspect a network:  docker network inspect
+  • Create a network:  docker network create --driver
+  • Attach a network to container:  docker network connect
+  • Detach a network from container:  docker network disconnect
+Creating network and DNS
+  •	docker network create dude
+  •	docker container run -d --net dude --net-alias search elasticsearch:2
+  •	docker network inspect dude
+  •	docker run --rm --net dude alpine nslookup search
+  •	docker container run --rm --net dude centos curl -s search:9200
+
+
