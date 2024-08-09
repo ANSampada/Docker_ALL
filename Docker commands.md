@@ -1,3 +1,5 @@
+<p style="color:blue;">This text is blue.</p>
+<p style="color:red;">This text is red.</p>
 docker version 
 docker info
 docker run --name mongo -d mongo 
