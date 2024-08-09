@@ -1,3 +1,4 @@
+```bash
 docker version 
 docker info
 docker run --name mongo -d mongo 
