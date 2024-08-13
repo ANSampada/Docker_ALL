@@ -33,4 +33,10 @@ Creating network and DNS
   •	docker network inspect dude
   •	docker run --rm --net dude alpine nslookup search
   •	docker container run --rm --net dude centos curl -s search:9200
+"prune" commands to clean up images, volumes, build cache, and containers
+	• docker image prune :to clean up just "dangling" images
+	• docker system prune :will clean up everything you're not currently using
+	• docker image prune -a :which will remove all images you're not using
+docker system df :to see space usage
+
 
