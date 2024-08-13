@@ -14,11 +14,11 @@ docker container rm
 docker container ls / docker container ps
 docker container run --rm -it centos:7 bash--->( this command will run the container in interactive mode and removes container onec after running)
 What's Going On In Containers
-  • docker container top - process list in one container 
-  • docker container inspect - details of one container config 
-  • docker container stats - performance stats for all containers Getting a Shell Inside Containers
-  • docker container run -it - start new container interactively 
-  • docker container exec -it - run additional command in existing containe
+  • docker container top :- process list in one container 
+  • docker container inspect :- details of one container config 
+  • docker container stats :- performance stats for all containers Getting a Shell Inside Containers
+  • docker container run -it :- start new container interactively 
+  • docker container exec -it :- run additional command in existing containe
 docker container run -p
 docker container port <container>
 Docker Networks: CLI Management
