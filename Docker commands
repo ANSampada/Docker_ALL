@@ -41,6 +41,7 @@ Creating network and DNS
 docker system df :to see space usage
 # Container Lifetime & Persistent Data: Volumes, Volumes, Volumes
 ## Persistent Data: Data Volumes
+Volumes are stored in a part of the host filesystem which is managed by Docker (/var/lib/docker/volumes/ on Linux)
 docker pull mysql
 docker image inspect mysql
 docker container inspect mysql
