@@ -1,0 +1,38 @@
+# Specify the base image
+FROM ubuntu:latest
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    wget \
+    vim \
+    git \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create and set the working directory
+WORKDIR /app
+
+# Copy local files to the container
+COPY . /app
+
+# Expose a port (example: 8080)
+EXPOSE 8080
+
+# Run a command during the build process (example: building a project)
+RUN make
+
+# Define an entry point
+ENTRYPOINT ["./entrypoint.sh"]
+
+# Define the default command
+CMD ["bash"]
+
+# Adding a health check
+HEALTHCHECK --interval=30s --timeout=3s CMD curl -f http://localhost:8080/ || exit 1
+
+# Add a volume
+VOLUME ["/data"]
