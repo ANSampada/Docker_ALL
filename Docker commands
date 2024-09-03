@@ -46,6 +46,7 @@ docker pull mysql
 docker image inspect mysql
 docker container inspect mysql
 docker volume inspect TAB COMPLETION
+docker volume rm psql
 docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True mysql
 docker volume ls
 docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql
@@ -58,3 +59,5 @@ docker container run -d --name nginx2 -p 8080:80 nginx
 docker container exec -it nginx bash
 ## Assignment Answers: Edit Code Running In Containers With Bind Mounts
 docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
+docker-compose up
+docker-compose down -v
